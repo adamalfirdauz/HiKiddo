@@ -25212,6 +25212,12 @@ p {
   width: 100%;
 }
 
+.list-md .item-input:last-child {
+  border-bottom: 1px solid #dedede;
+  margin-left: 16px;
+  padding-left: 0px;
+}
+
 img {
   max-width: 50%;
 }
@@ -25220,6 +25226,61 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.top.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.top {
+  background-color: #00aeef;
+}
+
+.item-input-has-focus .label-md[stacked],
+.input-has-focus .label-md[stacked],
+.item-input-has-focus .label-md[floating],
+.input-has-focus .label-md[floating] {
+  color: #ffffff;
+}
+
+.label-md[stacked],
+.label-md[floating] {
+  margin-left: 0;
+  margin-bottom: 0;
+  color: white;
+}
+
+.item-md {
+  padding-left: 16px;
+  padding-right: 0;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #000;
+  background-color: #00aeef;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lupa {
+  color: white;
+}
+
+.lupa a {
+  color: white;
+}
+
+ion-app.md [padding] .scroll-content {
+  padding-top: 0px;
+}
+
+ion-app.md [padding] .scroll-content {
+  padding: 0px;
 }
 
 #custom-overlay {

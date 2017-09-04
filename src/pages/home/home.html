@@ -9,24 +9,21 @@
 
 
 <ion-content padding>
+<div class="top">
   <img src="assets/logokiddo.png" class="center">
- <ion-list>
-
-  <ion-item>
-    <ion-label floating>Username</ion-label>
-    <ion-input type="text" #username></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label floating>Password</ion-label>
-    <ion-input type="password" #password></ion-input>
-  </ion-item>
-
-</ion-list>
-
-<div padding>
-  <button block ion-button (click)="signIn()">Login</button>
-
-<p> Belum punya akun ? Daftar <a href="">disini</a></p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" #username></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" #password></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button block ion-button (click)="signIn()">Login</button>
+  <p class="lupa"> Lupa password? Klik <a href="#">disini</a></p>
+  </div>
 </div>
 </ion-content>
