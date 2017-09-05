@@ -4,7 +4,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { LoginPage } from '../pages/login/login'
-import { TestPage } from '../pages/test/test';
 import { RegisterPage } from '../pages/register/register';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -14,7 +13,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     LoginPage,
-    TestPage,
     RegisterPage
   ],
   imports: [
@@ -25,7 +23,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     LoginPage,
-    TestPage,
     RegisterPage
   ],
   providers: [
