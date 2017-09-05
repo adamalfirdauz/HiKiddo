@@ -25199,6 +25199,76 @@ ion-navbar.toolbar {
   }
 }
 
+.title {
+  max-width: 55%;
+}
+
+img {
+  padding-top: 10px !important;
+  padding-bottom: 0px !important;
+  width: 55%;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.notif {
+  content: url(../../assets/notifikasi.png);
+  background-repeat: no-repeat;
+  background-position: 10%;
+  height: 80%;
+  width: 50%;
+  margin-left: -20px;
+  margin-right: -5px;
+}
+
+.bar-buttons-md[end] {
+  width: 10%;
+}
+
+.toolbar-background-md {
+  border-color: #fff;
+  background: #00aeef;
+}
+
+.header-badge {
+  margin-right: 100px !important;
+}
+
+.title {
+  max-width: 55%;
+}
+
+img {
+  padding-top: 10px !important;
+  padding-bottom: 0px !important;
+  width: 55%;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.notif {
+  content: url(../../assets/notifikasi.png);
+  background-repeat: no-repeat;
+  background-position: 10%;
+  height: 80%;
+  width: 50%;
+  margin-left: -20px;
+  margin-right: -5px;
+}
+
+.bar-buttons-md[end] {
+  width: 10%;
+}
+
+.toolbar-background-md {
+  border-color: #fff;
+  background: #00aeef;
+}
+
+.header-badge {
+  margin-right: 100px !important;
+}
+
 ion-app.md [padding], ion-app.md [padding] .scroll-content {
   padding-top: 30px;
 }
@@ -25383,4 +25453,79 @@ ion-app.md [padding] .scroll-content {
 .animation-target {
   -webkit-animation: animation 1000ms linear both;
   animation: animation 1000ms linear both;
+}
+
+.title {
+  max-width: 55%;
+}
+
+img {
+  padding-top: 10px !important;
+  padding-bottom: 0px !important;
+  width: 55%;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.notif {
+  content: url(../../assets/notifikasi.png);
+  background-repeat: no-repeat;
+  background-position: 10%;
+  height: 80%;
+  width: 50%;
+  margin-left: -20px;
+  margin-right: -5px;
+}
+
+.bar-buttons-md[end] {
+  width: 10%;
+}
+
+.toolbar-background-md {
+  border-color: #fff;
+  background: #00aeef;
+}
+
+.header-badge {
+  margin-right: 100px !important;
+}
+
+.ion-ios-cari,
+.ion-md-cari {
+  content: url(../../assets/cari.png);
+  background-repeat: no-repeat;
+  background-position: 30%;
+  height: 30%;
+  width: 30%;
+}
+
+.ion-ios-anak,
+.ion-md-anak {
+  content: url(../../assets/homeHikiddo.png);
+  background-repeat: no-repeat;
+  background-position: 60%;
+  height: 60%;
+  width: 60%;
+}
+
+.ion-ios-profil,
+.ion-md-profil {
+  content: url(../../assets/profile.png);
+  background-repeat: no-repeat;
+  background-position: 30%;
+  height: 30%;
+  width: 30%;
+}
+
+.ion-ios-bantuan,
+.ion-md-bantuan {
+  content: url(../../assets/bantuan.png);
+  background-repeat: no-repeat;
+  background-position: 40%;
+  height: 40%;
+  width: 40%;
+}
+
+.tabs-md .tabbar {
+  background: #00aeef;
 }

@@ -11,9 +11,9 @@
 .ion-md-anak {
   content: url(../../assets/homeHikiddo.png);
   background-repeat: no-repeat;
-  background-position: 45%;
-  height: 45%;
-  width : 45%;
+  background-position: 60%;
+  height: 60%;
+  width : 60%;
 }
 
 .ion-ios-profil,
@@ -23,6 +23,15 @@
   background-position: 30%;
   height: 30%;
   width : 30%;
+}
+
+.ion-ios-bantuan,
+.ion-md-bantuan {
+  content: url(../../assets/bantuan.png);
+  background-repeat: no-repeat;
+  background-position: 40%;
+  height: 40%;
+  width : 40%;
 }
 
 .tabs-md .tabbar {
