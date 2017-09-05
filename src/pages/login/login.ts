@@ -15,11 +15,13 @@ import { RegisterPage } from '../register/register';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  splash = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+  setTimeout(() => this.splash = false, 4000);
     console.log('ionViewDidLoad LoginPage');
   }
   SignIn(){
