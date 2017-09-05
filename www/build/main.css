@@ -25207,9 +25207,29 @@ p {
   text-align: center;
 }
 
+.bottom.button {
+  background-color: #f6851f;
+}
+
 .button {
   background-color: #81c341;
   width: 100%;
+}
+
+.button-outline-md {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f6851f;
+  color: #f6851f;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+ion-app.md [padding], ion-app.md [padding] .scroll-content {
+  padding-top: 10px;
+  padding: 16px;
+  padding-bottom: 2px;
 }
 
 .list-md .item-input:last-child {
@@ -25219,7 +25239,8 @@ p {
 }
 
 img {
-  max-width: 50%;
+  padding-top: 15px;
+  max-width: 55%;
 }
 
 .center {

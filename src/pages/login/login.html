@@ -1,0 +1,35 @@
+
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logokiddo.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+
+<ion-content padding>
+<div class="top">
+  <img src="assets/logokiddo.png" class="center">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" #username></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" #password></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button block ion-button (click)="SignIn()">Login</button>
+    <p class="lupa"> Lupa password? Klik <a href="#">disini</a></p>
+  </div>
+</div>
+<div class="bottom">
+  <div padding>
+    <p>Belum punya akun?</p>
+    <button ion-button outline class="daftar" (click)="SignUp()">Daftar</button>
+  </div>
+</div>
+</ion-content>
