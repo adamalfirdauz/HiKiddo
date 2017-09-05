@@ -9,9 +9,20 @@ import { BantuanPage } from '../pages/bantuan/bantuan';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+const firebaseAuth = {
+    apiKey: "AIzaSyABvafG0BMGmcYL6dK3X61aCu6dGTt_HDQ",
+    authDomain: "hikiddo-76f27.firebaseapp.com",
+    databaseURL: "https://hikiddo-76f27.firebaseio.com",
+    projectId: "hikiddo-76f27",
+    storageBucket: "",
+    messagingSenderId: "990152773375"
+  };
 
 @NgModule({
   declarations: [
@@ -26,7 +37,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
