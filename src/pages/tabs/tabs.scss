@@ -1,3 +1,30 @@
-page-tabs {
+.ion-ios-cari,
+.ion-md-cari {
+  content: url(../../assets/cari.png);
+  background-repeat: no-repeat;
+  background-position: 30%;
+  height: 30%;
+  width : 30%;
+}
 
+.ion-ios-anak,
+.ion-md-anak {
+  content: url(../../assets/homeHikiddo.png);
+  background-repeat: no-repeat;
+  background-position: 45%;
+  height: 45%;
+  width : 45%;
+}
+
+.ion-ios-profil,
+.ion-md-profil {
+  content: url(../../assets/profile.png);
+  background-repeat: no-repeat;
+  background-position: 30%;
+  height: 30%;
+  width : 30%;
+}
+
+.tabs-md .tabbar {
+    background: #00aeef;
 }

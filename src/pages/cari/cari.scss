@@ -1,3 +1,35 @@
-page-cari {
+.title{
+	max-width : 55%;
 
+}	
+img{
+	padding-top: 10px!important;
+	padding-bottom: 0px!important;
+	width :55%;
+	margin-top:-10px;
+	margin-bottom:-10px;
 }
+
+.notif{
+  content: url(../../assets/notifikasi.png);
+  background-repeat: no-repeat;
+  background-position: 10%;
+  height: 80%;
+  width : 50%;
+  margin-left :-20px;
+  margin-right : -5px;
+}
+
+.bar-buttons-md[end] {
+    width: 10%;
+}
+
+.toolbar-background-md {
+    border-color: #fff;
+    background: #00aeef;
+}
+
+.header-badge{
+  margin-right: 100px !important;
+}
+

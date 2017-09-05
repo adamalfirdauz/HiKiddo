@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CariPage } from '../cari/cari';
+import { AnakPage } from '../anak/anak';
+import { ProfilPage } from '../profil/profil';
 
 /**
  * Generated class for the TabsPage page.
@@ -14,6 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
+
+  tab1Root = CariPage;
+  tab2Root = AnakPage;
+  tab3Root = ProfilPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
