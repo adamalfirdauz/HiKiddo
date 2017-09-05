@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TestPage } from '../test/test';
+import { CariPage } from '../cari/cari';
 import { RegisterPage } from '../register/register';
 /**
  * Generated class for the LoginPage page.
@@ -25,7 +25,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   SignIn(){
-    this.navCtrl.push(TestPage);
+    this.navCtrl.push(CariPage);
   }
   SignUp(){
     this.navCtrl.push(RegisterPage);
