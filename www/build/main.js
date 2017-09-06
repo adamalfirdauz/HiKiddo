@@ -175,7 +175,7 @@ var BantuanPage = (function () {
 BantuanPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-bantuan',template:/*ion-inline-start:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\bantuan\bantuan.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <ion-title><img class="title" src="../assets/Hikiddo.png"></ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only color="royal" (click)="SignIn()"> <ion-icon class="notif"></ion-icon>\n\n       <ion-badge color="danger" item-end>10</ion-badge>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="pinggir">\n\n\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n      <img src="assets/glassblue.png" class="kecilin" id="cari">\n\n    </ion-col>\n\n    <ion-col>\n\n       <p>Fitur perncarian yang akan membantu anda mencari day care berdasarkan kata kunci yang anda masukan</p>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n\n\n  <ion-grid class="pad2">\n\n  <ion-row>\n\n    <ion-col>\n\n      <img src="assets/babyblue.png" class="kecilin" id="bayi">\n\n    </ion-col>\n\n    <ion-col>\n\n     <p>Fitur live report yang akan memberikan anda informasi mengenai kegiatan buah hati dengan tenang</p>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n\n\n  <ion-grid class="pad1">\n\n  <ion-row>\n\n    <ion-col>\n\n      <img src="assets/userblue.png" class="kecilin" id="user">\n\n    </ion-col>\n\n    <ion-col>\n\n      <p>Fitur profile berisikan informasi mengenai data diri anda</p>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n  <br>\n\n  <br>\n\n  <ion-grid class="pad">\n\n  <ion-row>\n\n    <ion-col>\n\n      <img src="assets/notifblue.png" class="kecilin" id="notif">\n\n    </ion-col>\n\n    <ion-col>\n\n      <p>Fitur notifikasi akan memberitahu anda dengan cepat terkait pemberitahuan dari sistem</p>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\bantuan\bantuan.html"*/,
+        selector: 'page-bantuan',template:/*ion-inline-start:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\bantuan\bantuan.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <ion-title><img class="title" src="../assets/Hikiddo.png"></ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only color="royal" (click)="SignIn()"> <ion-icon class="notif"></ion-icon>\n\n       <ion-badge color="danger" item-end>10</ion-badge>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="pinggir">\n\n\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n      <img src="assets/glassblue.png" class="kecilin" id="cari">\n\n    </ion-col>\n\n    <ion-col>\n\n       <p class="bantu">Fitur perncarian yang akan membantu anda mencari day care berdasarkan kata kunci yang anda masukan</p>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n\n\n  <ion-grid class="pad2">\n\n  <ion-row>\n\n    <ion-col>\n\n      <img src="assets/babyblue.png" class="kecilin" id="bayi">\n\n    </ion-col>\n\n    <ion-col>\n\n     <p class="bantu">Fitur live report yang akan memberikan anda informasi mengenai kegiatan buah hati dengan tenang</p>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n\n\n  <ion-grid class="pad1">\n\n  <ion-row>\n\n    <ion-col>\n\n      <img src="assets/userblue.png" class="kecilin" id="user">\n\n    </ion-col>\n\n    <ion-col>\n\n      <p class="bantu">Fitur profile berisikan informasi mengenai data diri anda</p>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n  <br>\n\n  <br>\n\n  <ion-grid class="pad">\n\n  <ion-row>\n\n    <ion-col>\n\n      <img src="assets/notifblue.png" class="kecilin" id="notif">\n\n    </ion-col>\n\n    <ion-col>\n\n      <p class="bantu">Fitur notifikasi akan memberitahu anda dengan cepat terkait pemberitahuan dari sistem</p>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\bantuan\bantuan.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], BantuanPage);
@@ -593,12 +593,15 @@ var LoginPage = (function () {
         this.fire = fire;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.splash = true;
     }
     LoginPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        setTimeout(function () { return _this.splash = false; }, 4000);
         console.log('ionViewDidLoad LoginPage');
     };
     LoginPage.prototype.SignIn = function () {
-        this.fire.auth.signInWithEmailAndPassword(this.username.value, this.password.value);
+        this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]);
     };
     LoginPage.prototype.SignUp = function () {
@@ -607,9 +610,9 @@ var LoginPage = (function () {
     return LoginPage;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('username'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('email'),
     __metadata("design:type", Object)
-], LoginPage.prototype, "username", void 0);
+], LoginPage.prototype, "email", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('password'),
     __metadata("design:type", Object)
@@ -617,7 +620,7 @@ __decorate([
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\login\login.html"*/'<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n\n  <div class="flb">\n\n    <div class="Aligner-item Aligner-item--top"></div>\n\n    <img src="assets/logokiddo.png">\n\n    <div class="Aligner-item Aligner-item--bottom"></div>\n\n  </div>\n\n</div>\n\n\n\n\n\n<ion-content padding>\n\n<div class="top">\n\n  <img src="assets/logokiddo.png" class="center">\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label floating>Username</ion-label>\n\n      <ion-input type="text" #username></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Password</ion-label>\n\n      <ion-input type="password" #password></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n\n    <button block ion-button (click)="SignIn()">Login</button>\n\n    <p class="lupa"> Lupa password? Klik <a href="#">disini</a></p>\n\n  </div>\n\n</div>\n\n<div class="bottom">\n\n  <div padding>\n\n    <p>Belum punya akun?</p>\n\n    <button ion-button outline class="daftar" (click)="SignUp()">Daftar</button>\n\n  </div>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\login\login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\login\login.html"*/'<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n\n  <div class="flb">\n\n    <div class="Aligner-item Aligner-item--top"></div>\n\n    <img src="assets/logokiddo.png">\n\n    <div class="Aligner-item Aligner-item--bottom"></div>\n\n  </div>\n\n</div>\n\n\n\n\n\n<ion-content padding>\n\n<div class="top">\n\n  <img src="assets/logokiddo.png" class="center">\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label floating>Email</ion-label>\n\n      <ion-input type="text" #email></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Password</ion-label>\n\n      <ion-input type="password" #password></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n\n    <button block ion-button (click)="SignIn()">Login</button>\n\n    <p class="lupa"> Lupa password? Klik <a href="#">disini</a></p>\n\n  </div>\n\n</div>\n\n<div class="bottom">\n\n  <div padding>\n\n    <p>Belum punya akun?</p>\n\n    <button ion-button outline class="daftar" (click)="SignUp()">Daftar</button>\n\n  </div>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\login\login.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], LoginPage);

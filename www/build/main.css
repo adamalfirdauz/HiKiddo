@@ -25274,7 +25274,7 @@ img {
   margin-right: 10px;
 }
 
-p {
+.bantu {
   text-align: center !important;
   color: #00aeef;
 }
@@ -25304,6 +25304,7 @@ p {
 
 .pad {
   margin-top: -60px;
+  color: whi;
 }
 
 .pad1 {
@@ -25355,6 +25356,7 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
 
 p {
   text-align: center;
+  color: white;
 }
 
 .bottom.button {

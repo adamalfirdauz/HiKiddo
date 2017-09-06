@@ -18,18 +18,21 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class LoginPage {
 
+  splash = true;
+
   constructor(public fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+    setTimeout(()=> this.splash = false, 4000);
     console.log('ionViewDidLoad LoginPage');
   }
 
-  @ViewChild('username') username;
+  @ViewChild('email') email;
   @ViewChild('password') password;
 
   SignIn(){
-    this.fire.auth.signInWithEmailAndPassword(this.username.value, this.password.value)
+    this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value)
     this.navCtrl.push(TabsPage);
   }
   SignUp(){
