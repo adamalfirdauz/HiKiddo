@@ -1,18 +1,60 @@
-<!--
-  Generated template for the BantuanPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>bantuan</ion-title>
-  </ion-navbar>
-
+  <ion-toolbar>
+    <ion-title><img class="title" src="../assets/Hikiddo.png"></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="SignIn()"> <ion-icon class="notif"></ion-icon>
+       <ion-badge color="danger" item-end>10</ion-badge>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="pinggir">
 
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <img src="assets/glassblue.png" class="kecilin" id="cari">
+    </ion-col>
+    <ion-col>
+       <p>Fitur perncarian yang akan membantu anda mencari day care berdasarkan kata kunci yang anda masukan</p>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+
+  <ion-grid class="pad2">
+  <ion-row>
+    <ion-col>
+      <img src="assets/babyblue.png" class="kecilin" id="bayi">
+    </ion-col>
+    <ion-col>
+     <p>Fitur live report yang akan memberikan anda informasi mengenai kegiatan buah hati dengan tenang</p>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+
+  <ion-grid class="pad1">
+  <ion-row>
+    <ion-col>
+      <img src="assets/userblue.png" class="kecilin" id="user">
+    </ion-col>
+    <ion-col>
+      <p>Fitur profile berisikan informasi mengenai data diri anda</p>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+  <br>
+  <br>
+  <ion-grid class="pad">
+  <ion-row>
+    <ion-col>
+      <img src="assets/notifblue.png" class="kecilin" id="notif">
+    </ion-col>
+    <ion-col>
+      <p>Fitur notifikasi akan memberitahu anda dengan cepat terkait pemberitahuan dari sistem</p>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
 </ion-content>
+

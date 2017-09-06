@@ -25269,6 +25269,86 @@ img {
   margin-right: 100px !important;
 }
 
+.pinggir {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+p {
+  text-align: center !important;
+  color: #00aeef;
+}
+
+.kecilin {
+  max-width: 40%;
+}
+
+#cari {
+  max-width: 30%;
+  margin-top: 30px;
+}
+
+#bayi {
+  margin-top: 30px;
+}
+
+#user {
+  margin-top: 6px;
+  max-width: 30%;
+}
+
+#notif {
+  margin-top: 20px;
+  max-width: 30%;
+}
+
+.pad {
+  margin-top: -60px;
+}
+
+.pad1 {
+  margin-top: -28px;
+}
+
+.pad2 {
+  margin-top: -28px;
+}
+
+.title {
+  max-width: 55%;
+}
+
+img {
+  padding-top: 10px !important;
+  padding-bottom: 0px !important;
+  width: 55%;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.notif {
+  content: url(../../assets/notifikasi.png);
+  background-repeat: no-repeat;
+  background-position: 10%;
+  height: 80%;
+  width: 50%;
+  margin-left: -20px;
+  margin-right: -5px;
+}
+
+.bar-buttons-md[end] {
+  width: 10%;
+}
+
+.toolbar-background-md {
+  border-color: #fff;
+  background: #00aeef;
+}
+
+.header-badge {
+  margin-right: 100px !important;
+}
+
 ion-app.md [padding], ion-app.md [padding] .scroll-content {
   padding-top: 30px;
 }
