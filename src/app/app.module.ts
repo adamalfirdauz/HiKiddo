@@ -8,6 +8,7 @@ import { ProfilPage } from '../pages/profil/profil';
 import { BantuanPage } from '../pages/bantuan/bantuan';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { EdituserPage } from '../pages/edituser/edituser';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -31,6 +32,7 @@ const firebaseAuth = {
     MyApp,
     LoginPage,
     RegisterPage,
+    EdituserPage,
     CariPage,
     AnakPage,
     ProfilPage,
@@ -49,6 +51,7 @@ const firebaseAuth = {
     MyApp,
     LoginPage,
     RegisterPage,
+    EdituserPage,
     CariPage,
     AnakPage,
     ProfilPage,

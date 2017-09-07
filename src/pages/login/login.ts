@@ -20,13 +20,13 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class LoginPage {
 
-  // splash = true;
+  splash = true;
 
   constructor(public fire: AngularFireAuth, public database:AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    // setTimeout(()=> this.splash = false, 4000);
+    setTimeout(()=> this.splash = false, 4000);
     console.log('ionViewDidLoad LoginPage');
   }
 
