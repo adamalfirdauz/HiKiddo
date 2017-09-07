@@ -25277,6 +25277,7 @@ img {
 .bantu {
   text-align: center !important;
   color: #00aeef;
+  margin-right: 5vw;
 }
 
 .kecilin {
@@ -25572,6 +25573,37 @@ img {
 
 .header-badge {
   margin-right: 100px !important;
+}
+
+ion-card {
+  margin-top: 0px !important;
+  display: block;
+  overflow: hidden;
+  background-color: #00aeef !important;
+}
+
+#profile-bg {
+  position: fixed;
+  width: 100%;
+  background-size: 100%;
+  background-position: 50% 20%;
+  text-align: center;
+}
+
+#profile-image {
+  margin-top: 1000px;
+  display: block;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  width: 150px;
+  height: 150px;
+  margin: 30px auto 0;
+}
+
+.content-md {
+  color: #000;
+  background-color: #fff;
+  margin-top: -35px;
 }
 
 ion-app.md [padding], ion-app.md [padding] .scroll-content {

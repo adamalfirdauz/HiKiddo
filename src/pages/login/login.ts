@@ -18,13 +18,13 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class LoginPage {
 
-  splash = true;
+  // splash = true;
 
   constructor(public fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    setTimeout(()=> this.splash = false, 4000);
+    // setTimeout(()=> this.splash = false, 4000);
     console.log('ionViewDidLoad LoginPage');
   }
 

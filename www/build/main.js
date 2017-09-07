@@ -129,7 +129,7 @@ var ProfilPage = (function () {
 ProfilPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profil',template:/*ion-inline-start:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\profil\profil.html"*/'\n\n<ion-header>\n\n  <ion-toolbar>\n\n    <ion-title><img class="title" src="../assets/Hikiddo.png"></ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only color="royal" (click)="SignIn()"> <ion-icon class="notif"></ion-icon>\n\n       <ion-badge color="danger" item-end>10</ion-badge>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\profil\profil.html"*/,
+        selector: 'page-profil',template:/*ion-inline-start:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\profil\profil.html"*/'\n\n<ion-header>\n\n  <ion-toolbar>\n\n    <ion-title><img class="title" src="../assets/Hikiddo.png"></ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only color="royal" (click)="SignIn()"> <ion-icon class="notif"></ion-icon>\n\n       <ion-badge color="danger" item-end>10</ion-badge>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n      <div id="profile-bg"></div>\n\n      <div id="content">\n\n        <div id="profile-info">\n\n          <img id="profile-image" src="assets/babyblue.png">\n\n        </div>\n\n   	</div>\n\n   	\n\n\n\n\n\n\n\n\n\n\n\n\n\n	<ion-card>\n\n    <ion-card-content>\n\n      <ion-card-title text-center>\n\n      <ion-item>\n\n        <ion-label stacked>Nama Lengkap</ion-label>\n\n        <ion-input type="text" [(ngModel)]="nama" name="nama" value="{{nama}}"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label stacked>Alamat</ion-label>\n\n        <ion-input type="text" [(ngModel)]="alamat" name="alamat" value="{{alamat}}"></ion-input>\n\n      </ion-item>\n\n\n\n  		<ion-item>\n\n		    <ion-label stacked>No. Hp</ion-label>\n\n		    <ion-input type="text" [(ngModel)]="hp" name="hp" value="{{hp}}"></ion-input>\n\n  		</ion-item>\n\n\n\n  		<ion-item>\n\n		    <ion-label stacked>Email</ion-label>\n\n		    <ion-input type="text" [(ngModel)]="hp" name="email" value="{{email}}"></ion-input>\n\n  		</ion-item>\n\n\n\n   		<ion-item>\n\n		    <ion-label stacked>Email</ion-label>\n\n		    <ion-input type="text" [(ngModel)]="hp" name="email" value="{{email}}"></ion-input>\n\n  		</ion-item>\n\n\n\n   		<ion-item>\n\n		    <ion-label stacked>Kota/Kabupaten</ion-label>\n\n		    <ion-input type="text" [(ngModel)]="hp" name="kota" value="{{kota}}"></ion-input>\n\n  		</ion-item>\n\n\n\n   		<ion-item>\n\n		    <ion-label stacked>Status Orang Tua</ion-label>\n\n		    <ion-input type="text" [(ngModel)]="hp" name="status" value="{{status}}"></ion-input>\n\n  		</ion-item>\n\n      \n\n\n\n      </ion-card-title>\n\n\n\n    </ion-card-content>   \n\n  </ion-card>\n\n\n\n\n\n  <ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n      <button type="submit" ion-button block (click)="edit()">Edit</button>\n\n    </ion-col>\n\n    <ion-col>\n\n     <button type="submit" ion-button block (click)="logout()">Logout</button>\n\n    </ion-col>\n\n  </ion-row>\n\n  </ion-grid>\n\n\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Firgiawan\ionic\HiKiddo\src\pages\profil\profil.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ProfilPage);
@@ -589,15 +589,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var LoginPage = (function () {
+    // splash = true;
     function LoginPage(fire, navCtrl, navParams) {
         this.fire = fire;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.splash = true;
     }
     LoginPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        setTimeout(function () { return _this.splash = false; }, 4000);
+        // setTimeout(()=> this.splash = false, 4000);
         console.log('ionViewDidLoad LoginPage');
     };
     LoginPage.prototype.SignIn = function () {
