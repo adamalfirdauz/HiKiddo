@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><img class="title" src="../assets/Hikiddo.png"></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="SignIn()"> <ion-icon class="notif"></ion-icon>
+       <ion-badge color="danger" item-end>10</ion-badge>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+   <div id="profile-bg"></div>
+      <div id="content">
+        <div id="profile-info">
+          <img id="profile-image" src="assets/babyblue.png">
+        </div>
+   	</div>
+   	
+   	<button class="button1" text-center ion-button (click)="gantiFoto()"> Ubah Foto Profil </button>
+
+
+
+
+
+	<ion-card>
+    <ion-card-content>
+      <ion-card-title text-center>
+      <ion-item>
+        <ion-label stacked>Nama Lengkap</ion-label>
+        <ion-input type="text" [(ngModel)]="nama" name="nama" value="{{nama}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Alamat</ion-label>
+        <ion-input type="text" [(ngModel)]="alamat" name="alamat" value="{{alamat}}"></ion-input>
+      </ion-item>
+
+  		<ion-item>
+		    <ion-label stacked>No. Hp</ion-label>
+		    <ion-input type="text" [(ngModel)]="hp" name="hp" value="{{hp}}"></ion-input>
+  		</ion-item>
+
+  		<ion-item>
+		    <ion-label stacked>Email</ion-label>
+		    <ion-input type="text" [(ngModel)]="email" name="email" value="{{email}}"></ion-input>
+  		</ion-item>
+
+
+   		<ion-item>
+		    <ion-label stacked>Kota/Kabupaten</ion-label>
+		    <ion-input type="text" [(ngModel)]="kota" name="kota" value="{{kota}}"></ion-input>
+  		</ion-item>
+
+   		<ion-item>
+		    <ion-label stacked>Status Orang Tua</ion-label>
+		    <ion-input type="text" [(ngModel)]="status" name="status" value="{{status}}"></ion-input>
+  		</ion-item>
+      
+
+      </ion-card-title>
+
+    </ion-card-content>   
+  </ion-card>
+
+
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+      <button type="submit" ion-button block (click)="update()">Update</button>
+    </ion-col>
+    <ion-col>
+     <button type="submit" ion-button block (click)="logout()">Logout</button>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+
+
+</ion-content>
