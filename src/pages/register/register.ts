@@ -28,11 +28,18 @@ export class RegisterPage {
   @ViewChild('username') username;
   @ViewChild('email') email;
   @ViewChild('password') password;
+  @ViewChild('userLevel') user;
 
   SignUp(){
+    // if(this.user.value == 1){
+    //   var user = "wali";
+    // }
+    // else{
+    //   var user = "mitra";
+    // }
     this.fire.auth.createUserWithEmailAndPassword(this.email.value, this.password.value).then(data => {
-      this.database.object('/orangTua/'+data.uid).set({
-        name: this.name.value, username: this.username.value, email: this.email.value
+      this.database.object('/user/'+data.uid).set({
+        name: this.name.value, username: this.username.value, email: this.email.value, userLevel: this.user.value
       });
     });
     this.navCtrl.push(LoginPage);

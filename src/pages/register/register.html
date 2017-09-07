@@ -18,8 +18,11 @@
       <ion-input type="password" #password></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Konfirmasi Password</ion-label>
-      <ion-input type="password2" #password></ion-input>
+      <ion-label>Daftar sebagai</ion-label>
+      <ion-select #userLevel >
+        <ion-option value="wali" >Orang Tua / Wali</ion-option>
+        <ion-option value="mitra" >Mitra</ion-option>
+      </ion-select>
     </ion-item>
   </ion-list>
   <div padding>
