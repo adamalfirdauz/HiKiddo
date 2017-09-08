@@ -25678,6 +25678,10 @@ ion-card {
   margin-top: -35px;
 }
 
+.error-message .item-inner {
+  border-bottom: 0 !important;
+}
+
 ion-app.md [padding], ion-app.md [padding] .scroll-content {
   padding-top: 30px;
 }

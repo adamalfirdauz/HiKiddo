@@ -10,16 +10,18 @@
 <ion-content padding>
 <div class="top">
   <img src="assets/logokiddo.png" class="center">
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Email</ion-label>
-      <ion-input type="text" #email></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password" #password></ion-input>
-    </ion-item>
-  </ion-list>
+  
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" #email></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" #password></ion-input>
+      </ion-item>
+    </ion-list>
+ 
   <div padding>
     <button block ion-button (click)="SignIn()">Login</button>
     <p class="lupa"> Lupa password? Klik <a href="#">disini</a></p>

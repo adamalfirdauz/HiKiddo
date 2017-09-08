@@ -1,8 +1,10 @@
-import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { IonicPage, NavController, LoadingController, Loading, AlertController, NavParams } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthProvider } from '../../providers/auth/auth';
+import { EmailValidator } from '../../validators/email';
 import { LoginPage } from '../login/login';
-import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase } from 'angularfire2/database'
+
 
 /**
  * Generated class for the RegisterPage page.
@@ -17,34 +19,51 @@ import { AngularFireDatabase } from 'angularfire2/database'
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-
-  constructor(public fire: AngularFireAuth, public database: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
+  public registerForm:FormGroup;
+  public loading:Loading;
+  constructor(
+    public navCtrl: NavController, 
+    public loadingCtrl: LoadingController, 
+    public alertCtrl: AlertController, 
+    public formBuilder: FormBuilder, 
+    public authProvider: AuthProvider) {
+    this.registerForm = formBuilder.group({
+      name: ['', Validators.compose([Validators.required, Validators.maxLength(50), Validators.pattern('[a-zA-Z, ]*')])],
+      email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
+      password: ['', Validators.compose([Validators.minLength(6), Validators.required])],
+      level: ['', Validators.compose([Validators.required])]
+    });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
-  }
-  @ViewChild('name') name;
-  @ViewChild('username') username;
-  @ViewChild('email') email;
-  @ViewChild('password') password;
-  @ViewChild('userLevel') user;
-
-  SignUp(){
-    // if(this.user.value == 1){
-    //   var user = "wali";
-    // }
-    // else{
-    //   var user = "mitra";
-    // }
-    this.fire.auth.createUserWithEmailAndPassword(this.email.value, this.password.value).then(data => {
-      this.database.object('/user/'+data.uid).set({
-        name: this.name.value, username: this.username.value, email: this.email.value, userLevel: this.user.value
+  registerUser(){
+    if(!this.registerForm.valid) {
+      console.log(this.registerForm.value);
+    } else {
+      this.authProvider.registerUser(this.registerForm.value.name, this.registerForm.value.email, this.registerForm.value.password, this.registerForm.value.level)
+      .then(() => {
+        this.loading.dismiss().then(()=>{
+           let alert = this.alertCtrl.create({
+              title: '',
+              subTitle: 'Silahkan untuk menkonfirmasi Email Anda terlebih dahulu.',
+              buttons: ['Tutup']
+            });
+           alert.present();
+        
+           this.navCtrl.setRoot(LoginPage);
+        });
+      }, (error) => {
+          this.loading.dismiss().then(() => {
+          var errorMessage: string = error.message;
+          let alert = this.alertCtrl.create({
+            message: errorMessage,
+            buttons: [{ text: "Ok", role: 'cancel' }]
+          });
+          alert.present();
       });
     });
-    this.navCtrl.push(LoginPage);
-  }
-  SignIn(){
-    this.navCtrl.push(LoginPage);
+    this.loading = this.loadingCtrl.create();
+    this.loading.present();
+    
+    }    
   }
 }

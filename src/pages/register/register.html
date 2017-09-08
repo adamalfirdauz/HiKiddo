@@ -1,32 +1,53 @@
 <ion-content padding class="top">
   <img src="assets/logokiddo.png" class="center">
+  <form [formGroup]="registerForm" (submit)="registerUser()" novalidate>
+
   <ion-list>
     <ion-item>
       <ion-label floating>Nama Lengkap</ion-label>
-      <ion-input type="text" #name></ion-input>
+      <ion-input formControlName="name" type="text" value="" ></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text" #username></ion-input>
+    <ion-item class="error-message" *ngIf="!registerForm.controls.name.valid  && registerForm.controls.name.dirty">
+      <p>Please enter a valid name.</p>
     </ion-item>
+    
     <ion-item>
       <ion-label floating>Alamat Email</ion-label>
-      <ion-input type="text" #email></ion-input>
+      <ion-input formControlName="email" type="text" value=""></ion-input>
     </ion-item>
+    <ion-item class="error-message" *ngIf="!registerForm.controls.email.valid  && registerForm.controls.email.dirty">
+      <p>Please enter a valid email.</p>
+    </ion-item>
+    
     <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input type="password" #password></ion-input>
+      <ion-input formControlName="password" type="password" value="" ></ion-input>
     </ion-item>
+    <ion-item class="error-message"*ngIf="!registerForm.controls.password.valid  && registerForm.controls.password.dirty">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
     <ion-item>
       <ion-label>Daftar sebagai</ion-label>
-      <ion-select #userLevel >
-        <ion-option value="wali" >Orang Tua / Wali</ion-option>
-        <ion-option value="mitra" >Mitra</ion-option>
+      <ion-select formControlName="level" >
+        <ion-option value=1 >Orang Tua / Wali</ion-option>
+        <ion-option value=2 >Mitra</ion-option> 
       </ion-select>
     </ion-item>
+     <ion-item class="error-message" *ngIf="!registerForm.controls.level.valid  && registerForm.controls.level.dirty">
+      <p>Please fill the option.</p>
+    </ion-item>
   </ion-list>
-  <div padding>
-    <button block ion-button (click)="SignUp()">Daftar</button>
-    <p>Sudah punya akun? <a (click)="SignIn()" href="#"><b>Masuk</b></a>.</p>
+   <div padding>
+    <button block ion-button type="submit">
+      Daftar
+    </button>
+    <p>Sudah punya akun? 
+      <a (click)="SignIn()" href="#">
+        <b>Masuk</b>
+      </a>.
+    </p>
   </div>
+
+  </form>
 </ion-content>
