@@ -48,7 +48,7 @@ export class RegisterPage {
               buttons: ['Tutup']
             });
            alert.present();
-        
+
            this.navCtrl.setRoot(LoginPage);
         });
       }, (error) => {
@@ -65,5 +65,9 @@ export class RegisterPage {
     this.loading.present();
     
     }    
+  }
+
+  SignIn(){
+    this.navCtrl.setRoot(LoginPage);
   }
 }

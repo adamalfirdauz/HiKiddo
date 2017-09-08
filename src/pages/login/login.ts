@@ -42,10 +42,10 @@ export class LoginPage {
     this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value).then(user => {
       this.database.object('/user/'+user.uid).subscribe(data => {
         console.log(data);
-        if( data.userLevel == "wali" )
-          this.loading.dismiss().then( () => {
+        if( data.level == "wali" )
+          //this.loading.dismiss().then( () => {
           this.navCtrl.push(TabsPage);
-        });
+        //});
         else
           this.navCtrl.push(RegisterPage);
       });

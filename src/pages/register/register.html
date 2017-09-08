@@ -10,7 +10,7 @@
     <ion-item class="error-message" *ngIf="!registerForm.controls.name.valid  && registerForm.controls.name.dirty">
       <p>Please enter a valid name.</p>
     </ion-item>
-    
+
     <ion-item>
       <ion-label floating>Alamat Email</ion-label>
       <ion-input formControlName="email" type="text" value=""></ion-input>
@@ -30,8 +30,8 @@
     <ion-item>
       <ion-label>Daftar sebagai</ion-label>
       <ion-select formControlName="level" >
-        <ion-option value=1 >Orang Tua / Wali</ion-option>
-        <ion-option value=2 >Mitra</ion-option> 
+        <ion-option value="wali" >Orang Tua / Wali</ion-option>
+        <ion-option value="mitra" >Mitra</ion-option> 
       </ion-select>
     </ion-item>
      <ion-item class="error-message" *ngIf="!registerForm.controls.level.valid  && registerForm.controls.level.dirty">

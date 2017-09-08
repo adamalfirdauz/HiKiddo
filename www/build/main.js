@@ -319,20 +319,20 @@ var RegisterPage = (function () {
             this.loading.present();
         }
     };
+    RegisterPage.prototype.SignIn = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
+    };
     return RegisterPage;
 }());
 RegisterPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-register',template:/*ion-inline-start:"/home/pramesywaraj/Desktop/Gemastik A6/HiKiddo/src/pages/register/register.html"*/'<ion-content padding class="top">\n  <img src="assets/logokiddo.png" class="center">\n  <form [formGroup]="registerForm" (submit)="registerUser()" novalidate>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Nama Lengkap</ion-label>\n      <ion-input formControlName="name" type="text" value="" ></ion-input>\n    </ion-item>\n    <ion-item class="error-message" *ngIf="!registerForm.controls.name.valid  && registerForm.controls.name.dirty">\n      <p>Please enter a valid name.</p>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label floating>Alamat Email</ion-label>\n      <ion-input formControlName="email" type="text" value=""></ion-input>\n    </ion-item>\n    <ion-item class="error-message" *ngIf="!registerForm.controls.email.valid  && registerForm.controls.email.dirty">\n      <p>Please enter a valid email.</p>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input formControlName="password" type="password" value="" ></ion-input>\n    </ion-item>\n    <ion-item class="error-message"*ngIf="!registerForm.controls.password.valid  && registerForm.controls.password.dirty">\n      <p>Your password needs more than 6 characters.</p>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Daftar sebagai</ion-label>\n      <ion-select formControlName="level" >\n        <ion-option value=1 >Orang Tua / Wali</ion-option>\n        <ion-option value=2 >Mitra</ion-option> \n      </ion-select>\n    </ion-item>\n     <ion-item class="error-message" *ngIf="!registerForm.controls.level.valid  && registerForm.controls.level.dirty">\n      <p>Please fill the option.</p>\n    </ion-item>\n  </ion-list>\n   <div padding>\n    <button block ion-button type="submit">\n      Daftar\n    </button>\n    <p>Sudah punya akun? \n      <a (click)="SignIn()" href="#">\n        <b>Masuk</b>\n      </a>.\n    </p>\n  </div>\n\n  </form>\n</ion-content>\n'/*ion-inline-end:"/home/pramesywaraj/Desktop/Gemastik A6/HiKiddo/src/pages/register/register.html"*/,
+        selector: 'page-register',template:/*ion-inline-start:"/home/pramesywaraj/Desktop/Gemastik A6/HiKiddo/src/pages/register/register.html"*/'<ion-content padding class="top">\n  <img src="assets/logokiddo.png" class="center">\n  <form [formGroup]="registerForm" (submit)="registerUser()" novalidate>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Nama Lengkap</ion-label>\n      <ion-input formControlName="name" type="text" value="" ></ion-input>\n    </ion-item>\n    <ion-item class="error-message" *ngIf="!registerForm.controls.name.valid  && registerForm.controls.name.dirty">\n      <p>Please enter a valid name.</p>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Alamat Email</ion-label>\n      <ion-input formControlName="email" type="text" value=""></ion-input>\n    </ion-item>\n    <ion-item class="error-message" *ngIf="!registerForm.controls.email.valid  && registerForm.controls.email.dirty">\n      <p>Please enter a valid email.</p>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input formControlName="password" type="password" value="" ></ion-input>\n    </ion-item>\n    <ion-item class="error-message"*ngIf="!registerForm.controls.password.valid  && registerForm.controls.password.dirty">\n      <p>Your password needs more than 6 characters.</p>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Daftar sebagai</ion-label>\n      <ion-select formControlName="level" >\n        <ion-option value="wali" >Orang Tua / Wali</ion-option>\n        <ion-option value="mitra" >Mitra</ion-option> \n      </ion-select>\n    </ion-item>\n     <ion-item class="error-message" *ngIf="!registerForm.controls.level.valid  && registerForm.controls.level.dirty">\n      <p>Please fill the option.</p>\n    </ion-item>\n  </ion-list>\n   <div padding>\n    <button block ion-button type="submit">\n      Daftar\n    </button>\n    <p>Sudah punya akun? \n      <a (click)="SignIn()" href="#">\n        <b>Masuk</b>\n      </a>.\n    </p>\n  </div>\n\n  </form>\n</ion-content>\n'/*ion-inline-end:"/home/pramesywaraj/Desktop/Gemastik A6/HiKiddo/src/pages/register/register.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _e || Object])
 ], RegisterPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=register.js.map
 
 /***/ }),
@@ -780,10 +780,9 @@ var LoginPage = (function () {
         this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value).then(function (user) {
             _this.database.object('/user/' + user.uid).subscribe(function (data) {
                 console.log(data);
-                if (data.userLevel == "wali")
-                    _this.loading.dismiss().then(function () {
-                        _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]);
-                    });
+                if (data.level == "wali")
+                    //this.loading.dismiss().then( () => {
+                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]);
                 else
                     _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__register_register__["a" /* RegisterPage */]);
             });
@@ -807,9 +806,10 @@ LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-login',template:/*ion-inline-start:"/home/pramesywaraj/Desktop/Gemastik A6/HiKiddo/src/pages/login/login.html"*/'<div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n  <div class="flb">\n    <div class="Aligner-item Aligner-item--top"></div>\n    <img src="assets/logokiddo.png">\n    <div class="Aligner-item Aligner-item--bottom"></div>\n  </div>\n</div>\n\n\n<ion-content padding>\n<div class="top">\n  <img src="assets/logokiddo.png" class="center">\n  \n    <ion-list>\n      <ion-item>\n        <ion-label floating>Email</ion-label>\n        <ion-input type="text" #email></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Password</ion-label>\n        <ion-input type="password" #password></ion-input>\n      </ion-item>\n    </ion-list>\n \n  <div padding>\n    <button block ion-button (click)="SignIn()">Login</button>\n    <p class="lupa"> Lupa password? Klik <a href="#">disini</a></p>\n  </div>\n</div>\n<div class="bottom">\n  <div padding>\n    <p>Belum punya akun?</p>\n    <button ion-button outline class="daftar" (click)="SignUp()">Daftar</button>\n  </div>\n</div>\n</ion-content>\n'/*ion-inline-end:"/home/pramesywaraj/Desktop/Gemastik A6/HiKiddo/src/pages/login/login.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_angularfire2_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angularfire2_auth__["a" /* AngularFireAuth */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]) === "function" && _e || Object])
 ], LoginPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=login.js.map
 
 /***/ })
