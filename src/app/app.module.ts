@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { Geolocation } from '@ionic-native/geolocation';  
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -61,6 +62,7 @@ const firebaseAuth = {
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

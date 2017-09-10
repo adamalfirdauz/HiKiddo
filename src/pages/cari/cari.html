@@ -5,11 +5,16 @@
       <button ion-button icon-only color="royal" (click)="SignIn()"> <ion-icon class="notif"></ion-icon>
        <ion-badge color="danger" item-end>10</ion-badge>
       </button>
+      <ion-navbar>
+      
+       </ion-navbar>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+ 
+<ion-content>
+  <div #map id="map"></div> 
 
-<ion-content padding>
+  <button ion-button block class="tandain" (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button> 
 </ion-content>
-
