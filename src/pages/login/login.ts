@@ -1,4 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
+import { 
+  Loading,
+  LoadingController,
+  AlertController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { RegisterPage } from '../register/register';
@@ -18,11 +22,11 @@ import { AngularFireDatabase } from 'angularfire2/database';
   selector: 'page-login',
   templateUrl: 'login.html',
 })
-export class LoginPage {
-
+export class LoginPage { 
+  public loading:Loading;
   splash = true;
 
-  constructor(public fire: AngularFireAuth, public database:AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public fire: AngularFireAuth, public database:AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public loadCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -38,14 +42,16 @@ export class LoginPage {
     this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value).then(user => {
       this.database.object('/user/'+user.uid).subscribe(data => {
         console.log(data);
-        if( data.userLevel == "wali" )
+        if( data.level == "wali" )
+          //this.loading.dismiss().then( () => {
           this.navCtrl.push(TabsPage);
+        //});
         else
           this.navCtrl.push(RegisterPage);
       });
     });
   }
   SignUp(){
-    this.navCtrl.push(RegisterPage);
+    this.navCtrl.setRoot(RegisterPage);
   }
 }
